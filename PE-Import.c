@@ -3,8 +3,6 @@
 #include <unistd.h>
 #include <string.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
   if( access( "C:\\PE-1.txt", F_OK ) != -1 ) {
     // file exists
