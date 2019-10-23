@@ -1,7 +1,8 @@
 EECS 349
 HW 2 Part 3
 
-#1
+***#1***
+
 Starting from the main method (assuming esp is 0 to start)
 
 Move 3 to ptr[esp + 1ch] (1ch is 28 in decimal)
