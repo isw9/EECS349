@@ -280,3 +280,73 @@ my thought process and work as I worked through a single iteration of the loop a
 final answer for this problem but have my work showing my thought process.
 
 See See numberThree.c for my attempt at the c code.
+
+
+***#4***
+
+See hw2Part3Q4.png for a screenshot of the static analysis I did of the exe file using IDA.
+That picture contains the assembly code I will analyze.
+
+Starting from the main method (assuming esp is 0 to start)
+
+Move 7 to ptr[esp + 1a8h] (1a8 is 424 in decimal)
+
+Move 64h (100) to ptr[esp + 1a4h] (1a4 is 420 in decimal)
+
+Move 0 to ptr[esp + 1ach] (1ac is 428 in decimal)
+
+Jump to loc_401619
+
+In loc_401619:
+
+Move ptr[428] (0) to eax
+
+Compare ptr[420] (100) with the value in eax (0)
+
+If 0 is less than 100, jump to loc_4015FC
+
+In loc_4015FC:
+
+Move ptr[428] (0) to eax
+
+Move the memory address of ptr[1] into edx
+
+Move ptr[428] (0) to eax
+
+Move edx to ptr[(eax * 4) + 20] (when 100, edx will be stored at ptr[420])
+
+Add 1 to ptr[428] (which is now 1)
+
+That concludes the first iteration of the loop
+
+Now we want to look at the case where we don't jump to loc_4015FC
+
+Move ptr[424] to eax
+
+Move eax to ptr[8]
+
+Move ptr[420] to eax
+
+Load the memory address of ptr[1b0 + var_19c] (no idea what var_19c is)
+
+Move eax to ptr[0]
+
+Call function Z5proc1Piii
+
+Move eax to ptr[4]
+
+Print out the value currently in ptr[0]
+
+For this program's overall functionality, I'm a little unsure if there is a specific number
+answer because of the call to the Z5proc1Piii method. I couldn't find a way to
+analyze this function so I have commented out in the c file I wrote so I'm assuming
+it is outside the scope of this specific homework question. Overall, this program
+initializes an array with 3 values (7, 100, and 0). While the last element
+is smaller than the first element, it then stores the second element in spot where the
+last element is and increments the second element. It then uses the first and second elements
+in the Z5proc1Piii method to calculate a final value to print out. Similar to part 3,
+I know there are some small details of my answer that are probably incorrect but hope I
+was able to demonstrate my ability to statically analyze an executable using IDA and figure out
+some of the functionality of what it does.
+
+See See numberFour.c for my attempt at the c code.
