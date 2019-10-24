@@ -1,6 +1,5 @@
 #include <stdio.h>
 int main(void){
-    // Your code here!
     int param1 = 3;
     int param2 = 5;
     int param3 = 0;
