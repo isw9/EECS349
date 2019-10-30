@@ -1,6 +1,6 @@
 ## EECS 349 HW 3 Part 1
 
-#Q1
+# Q1
 
 For the first problem, I followed along with the tutorial in the lecture slides.
 I changed one line of code in the assembly file.
@@ -51,16 +51,18 @@ Added together this gives us a value of 353.
 Now we need to XOR 353's binary representation with the binary representation of 22136.
 
 000000101100001 (353)
+
 101011001111000 (22136)
----
-101011100011001 (22297 in decimal)
+
+**101011100011001** (22297 in decimal)
 
 Now we need to XOR 22297's binary representation with the binary representation of 4660.
 
 101011100011001(22297)
+
 001001000110100(4660)
----
-100010100101101 (17709 in decimal)
+
+**100010100101101** (17709 in decimal)
 
 
 This gives us a decimal answer of 17709. This is the serial number that is used to
