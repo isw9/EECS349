@@ -15,8 +15,11 @@ I saved the new file as an executable (it is named CRACKMEIsaac.EXE).
 Here are the serial numbers for my name and the names of the TAs.
 
 isaac -> 17709
+
 yiming -> 17793
+
 shifu -> 17715
+
 yujie -> 17866
 
 The algorithm to find these values is as follows:
